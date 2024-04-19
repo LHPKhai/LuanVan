@@ -60,6 +60,8 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -68,6 +70,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,23 +80,60 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CauHoiNhiemVu.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DBThaoTac.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FChamDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FChamDiem.Designer.cs">
+      <DependentUpon>FChamDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FThaoTacNhiemVu.cs">
+    <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FThaoTacNhiemVu.Designer.cs">
-      <DependentUpon>FThaoTacNhiemVu.cs</DependentUpon>
+    <Compile Include="FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDanhSachDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDanhSachDeTai.Designer.cs">
+      <DependentUpon>FDanhSachDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDKDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDKDeTai.Designer.cs">
+      <DependentUpon>FDKDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGiangVien.Designer.cs">
+      <DependentUpon>FGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhiemVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhiemVu.Designer.cs">
+      <DependentUpon>FNhiemVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSinhVien.Designer.cs">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTinNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTinNhan.Designer.cs">
+      <DependentUpon>FTinNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="GiangVien.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -130,8 +170,71 @@
     <Compile Include="ThongTinDangNhap.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FThaoTacNhiemVu.resx">
-      <DependentUpon>FThaoTacNhiemVu.cs</DependentUpon>
+    <Compile Include="UCDeTai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDeTai.Designer.cs">
+      <DependentUpon>UCDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDKDeTai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDKDeTai.Designer.cs">
+      <DependentUpon>UCDKDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDSNhiemVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDSNhiemVu.Designer.cs">
+      <DependentUpon>UCDSNhiemVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDuyetDeTai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDuyetDeTai.Designer.cs">
+      <DependentUpon>UCDuyetDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCGuiTinNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCGuiTinNhan.Designer.cs">
+      <DependentUpon>UCGuiTinNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMSSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMSSV.Designer.cs">
+      <DependentUpon>UCMSSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCThaoTacDeTai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCThaoTacDeTai.Designer.cs">
+      <DependentUpon>UCThaoTacDeTai.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FChamDiem.resx">
+      <DependentUpon>FChamDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDanhSachDeTai.resx">
+      <DependentUpon>FDanhSachDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDKDeTai.resx">
+      <DependentUpon>FDKDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGiangVien.resx">
+      <DependentUpon>FGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhiemVu.resx">
+      <DependentUpon>FNhiemVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSinhVien.resx">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTinNhan.resx">
+      <DependentUpon>FTinNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,6 +245,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCDeTai.resx">
+      <DependentUpon>UCDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDKDeTai.resx">
+      <DependentUpon>UCDKDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDSNhiemVu.resx">
+      <DependentUpon>UCDSNhiemVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDuyetDeTai.resx">
+      <DependentUpon>UCDuyetDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCGuiTinNhan.resx">
+      <DependentUpon>UCGuiTinNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMSSV.resx">
+      <DependentUpon>UCMSSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCThaoTacDeTai.resx">
+      <DependentUpon>UCThaoTacDeTai.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
@@ -197,6 +321,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

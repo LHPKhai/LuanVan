@@ -1,0 +1,57 @@
+﻿CREATE TABLE ThongTinDangNhap (
+    ID INT PRIMARY KEY IDENTITY,
+    TenDangNhap VARCHAR(50) NOT NULL,
+    MatKhau VARCHAR(50) NOT NULL,
+    LoaiNguoiDung NVARCHAR(50) NOT NULL
+);
+CREATE TABLE GiangVien (
+    ID INT PRIMARY KEY IDENTITY,
+    HoTen NVARCHAR(100) NOT NULL,
+    NgaySinh DATE,
+    GioiTinh NVARCHAR(10),
+    SoDienThoai VARCHAR(20),
+    Email NVARCHAR(100)
+);
+CREATE TABLE SinhVien (
+    ID INT PRIMARY KEY IDENTITY,
+    HoTen NVARCHAR(100) NOT NULL,
+    NgaySinh DATE,
+    GioiTinh NVARCHAR(10),
+    SoDienThoai VARCHAR(20),
+    Email NVARCHAR(100)
+);
+CREATE TABLE LuanVan (
+    ID INT PRIMARY KEY IDENTITY,
+    Ten NVARCHAR(100) NOT NULL,
+    NoiDung NVARCHAR(MAX),
+    YeuCau NVARCHAR(MAX),
+    SoLuongSinhVien INT,
+    TheLoai NVARCHAR(50),
+    CongNghe NVARCHAR(50),
+    GiangVienID INT,
+    FOREIGN KEY (GiangVienID) REFERENCES GiangVien(ID)
+);
+CREATE TABLE NhiemVu (
+    ID INT PRIMARY KEY IDENTITY,
+    Ten NVARCHAR(100) NOT NULL,
+    NoiDung NVARCHAR(MAX),
+    ThoiGian DATE,
+    TienDo INT,
+    LuanVanID INT,
+    FOREIGN KEY (LuanVanID) REFERENCES LuanVan(ID)
+);
+CREATE TABLE CauHoiNhiemVu (
+    ID INT PRIMARY KEY IDENTITY,
+    NoiDung NVARCHAR(MAX),
+    ThoiGian DATETIME,
+    NhiemVuID INT,
+    FOREIGN KEY (NhiemVuID) REFERENCES NhiemVu(ID)
+);
+CREATE TABLE NhiemVuSinhVien (
+    ID INT PRIMARY KEY IDENTITY,
+    TiLePhanCham INT,
+    SVID INT,
+    NhiemVuID INT,
+    FOREIGN KEY (SVID) REFERENCES SinhVien(ID),
+    FOREIGN KEY (NhiemVuID) REFERENCES NhiemVu(ID)
+);

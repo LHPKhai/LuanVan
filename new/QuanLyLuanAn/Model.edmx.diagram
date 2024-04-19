@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="77e15d8df2254933b6827bcdcd79b0fc" Name="Diagram1">
+        <EntityTypeShape EntityType="DBLuanVanModel.CauHoiNhiemVu" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLuanVanModel.GiangVien" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLuanVanModel.LuanVan" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLuanVanModel.NhiemVu" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLuanVanModel.NhiemVuSinhVien" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLuanVanModel.SinhVien" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLuanVanModel.ThongTinDangNhap" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="DBLuanVanModel.FK__CauHoiNhi__Nhiem__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLuanVanModel.FK__LuanVan__GiangVi__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLuanVanModel.FK__NhiemVu__LuanVan__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLuanVanModel.FK__NhiemVuSi__Nhiem__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLuanVanModel.FK__NhiemVuSin__SVID__44FF419A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

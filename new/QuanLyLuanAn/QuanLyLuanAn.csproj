@@ -82,19 +82,8 @@
     <Compile Include="CauHoiNhiemVu.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="DBThaoTac.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FThaoTacNhiemVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FThaoTacNhiemVu.Designer.cs">
-      <DependentUpon>FThaoTacNhiemVu.cs</DependentUpon>
-    </Compile>
     <Compile Include="GiangVien.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -130,9 +119,6 @@
     <Compile Include="ThongTinDangNhap.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FThaoTacNhiemVu.resx">
-      <DependentUpon>FThaoTacNhiemVu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
